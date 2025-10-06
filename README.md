@@ -233,12 +233,15 @@ Each table has a unique primary key for record identification:
 
 -	README.md - Project documentation (this file)
 
--	ERD diagrams - Database relationship diagrams
+-	hospital_erd.png - Entity Relationship Diagram
+
+**Entity Relationship Diagram**
+![Hospital Database ERD](hospital_erd.png)
 
 
 **Conclusion**
 
-This hospital database system successfully demonstrates:
+This hospital database system demonstrates:
 
 -	Proper relational database design with normalized tables
 
