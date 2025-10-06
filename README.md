@@ -98,7 +98,7 @@ The database consists of four main tables:
 
 **Primary Keys:**
 
-•	Each table has a unique primary key for record identification
+•	Each table has a unique primary key for record identification: hospital_id, doctor_id, person_id, prescription_id
 
 
 
@@ -114,6 +114,7 @@ The database consists of four main tables:
 
 
 **Data Integrity:**
+
 •	Foreign key constraints ensure referential integrity
 
 •	Cascading relationships maintain data consistency
@@ -206,6 +207,7 @@ The database consists of four main tables:
 •	GitHub repository with version control
 
 •	Public access for assessment purposes
+
 
 **Files Included:**
 
