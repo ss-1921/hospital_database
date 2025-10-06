@@ -13,23 +13,23 @@ This project implements a comprehensive MySQL database system for managing hospi
 - **Prescriptions** (500 records): Medication prescriptions linking patients and doctors
 
 ### Relationships
-•	One Hospital → Many Doctors
+-	One Hospital → Many Doctors
 
-•	One Doctor → Many Patients
+-	One Doctor → Many Patients
 
-•	One Doctor → Many Prescriptions
+-	One Doctor → Many Prescriptions
 
-•	One Patient → Many Prescriptions
+-	One Patient → Many Prescriptions
 
 ### Files in Repository
 
 **Main Files**:
 
-•	hospital_database.sql - Complete database export
+-	hospital_database.sql - Complete database export
 
-•	queries.sql - All required SQL queries with descriptive names
+-	queries.sql - All required SQL queries with descriptive names
 
-•	README.md - This documentation file
+-	README.md - This documentation file
 
 **SQL Queries Included:**
 1.	get_doctors_by_hospital - List doctors at a specific hospital
@@ -98,51 +98,59 @@ The database consists of four main tables:
 
 **Primary Keys:**
 
-•	Each table has a unique primary key for record identification: hospital_id, doctor_id, person_id, prescription_id
+Each table has a unique primary key for record identification:
+
+- Hospitals: hospital_id
+
+- Doctors: doctor_id
+
+- Patients: person_id  
+
+- Prescriptions: prescription_id
 
 
 
 **Foreign Key Relationships:**
 
-•	Doctors → Hospitals (many-to-one)
+-	Doctors → Hospitals (many-to-one)
 
-•	Patients → Doctors (many-to-one)
+-	Patients → Doctors (many-to-one)
 
-•	Prescriptions → Patients (many-to-one)
+-	Prescriptions → Patients (many-to-one)
 
-•	Prescriptions → Doctors (many-to-one)
+-	Prescriptions → Doctors (many-to-one)
 
 
 **Data Integrity:**
 
-•	Foreign key constraints ensure referential integrity
+-	Foreign key constraints ensure referential integrity
 
-•	Cascading relationships maintain data consistency
+-	Cascading relationships maintain data consistency
 
-•	Prevents orphaned records in related tables
+-	Prevents orphaned records in related tables
 
 ### Project Task: Database Design & Implementation
 
 **Data Modeling:**
 
-•	Designed Entity Relationship Diagram (ERD) to establish table relationships
+-	Designed Entity Relationship Diagram (ERD) to establish table relationships
 
-•	Implemented primary keys and foreign key constraints for data integrity
+-	Implemented primary keys and foreign key constraints for data integrity
 
-•	Established one-to-many relationships between Hospitals-Doctors and Doctors-Patients
+-	Established one-to-many relationships between Hospitals-Doctors and Doctors-Patients
 
-•	Created many-to-many relationship resolution through Prescriptions table
+-	Created many-to-many relationship resolution through Prescriptions table
 
 
 **Database Creation:**
 
-•	Created MySQL database with four normalized tables
+-	Created MySQL database with four normalized tables
 
-•	Imported data from CSV files using LOAD DATA LOCAL INFILE
+-	Imported data from CSV files using LOAD DATA LOCAL INFILE
 
-•	Implemented proper data types and constraints
+-	Implemented proper data types and constraints
 
-•	Verified data integrity through relationship validation
+-	Verified data integrity through relationship validation
 
 
 **Project Task: Query Development**
@@ -167,78 +175,78 @@ The database consists of four main tables:
 
 **Data Integrity Checks:**
 
-•	Verified foreign key relationships work correctly
+-	Verified foreign key relationships work correctly
 
-•	Validated that all prescriptions reference existing patients and doctors
+-	Validated that all prescriptions reference existing patients and doctors
 
-•	Confirmed hospital-doctor assignments are consistent
+-	Confirmed hospital-doctor assignments are consistent
 
-•	Tested query functionality with sample data
+-	Tested query functionality with sample data
 
 
 **Performance Validation:**
 
-•	All queries execute without errors
+-	All queries execute without errors
 
-•	Relationships maintain referential integrity
+-	Relationships maintain referential integrity
 
-•	Data retrieval operations return expected results
+-	Data retrieval operations return expected results
 
-•	INSERT operations successfully add new records
+-	INSERT operations successfully add new records
 
 
 **Technical Documentation:**
 
-•	Comprehensive README with project description
+-	Comprehensive README with project description
 
-•	SQL query documentation with clear naming conventions
+-	SQL query documentation with clear naming conventions
 
-•	Database schema explanation
+-	Database schema explanation
 
-•	Setup and usage instructions
+-	Setup and usage instructions
 
 
 **Deployment Ready:**
 
-•	Complete database export in hospital_database.sql
+-	Complete database export in hospital_database.sql
 
-•	All functional SQL queries in queries.sql
+-	All functional SQL queries in queries.sql
 
-•	GitHub repository with version control
+-	GitHub repository with version control
 
-•	Public access for assessment purposes
+-	Public access for assessment purposes
 
 
 **Files Included:**
 
-•	hospital_database.sql - Complete database export
+-	hospital_database.sql - Complete database export
 
-•	queries.sql - All 6 functional SQL queries with descriptive names
+-	queries.sql - All 6 functional SQL queries with descriptive names
 
-•	doctors.csv - Original doctor data (100 records)
+-	doctors.csv - Original doctor data (100 records)
 
-•	hospitals.csv - Original hospital data (40 records)
+-	hospitals.csv - Original hospital data (40 records)
 
-•	patients.csv - Original patient data (600 records)
+-	patients.csv - Original patient data (600 records)
 
-•	prescriptions.csv - Original prescription data (500 records)
+-	prescriptions.csv - Original prescription data (500 records)
 
-•	README.md - Project documentation (this file)
+-	README.md - Project documentation (this file)
 
-•	ERD diagrams - Database relationship diagrams
+-	ERD diagrams - Database relationship diagrams
 
 
 **Conclusion**
 
 This hospital database system successfully demonstrates:
 
-•	Proper relational database design with normalized tables
+-	Proper relational database design with normalized tables
 
-•	Effective use of primary and foreign keys for data integrity
+-	Effective use of primary and foreign keys for data integrity
 
-•	Functional SQL queries for common hospital operations
+-	Functional SQL queries for common hospital operations
 
-•	Comprehensive documentation for maintainability
+-	Comprehensive documentation for maintainability
+
 
 The system is ready for deployment and can be extended with additional healthcare modules.
-
