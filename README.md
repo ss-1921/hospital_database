@@ -195,17 +195,6 @@ Each table has a unique primary key for record identification:
 -	INSERT operations successfully add new records
 
 
-**Technical Documentation:**
-
--	Comprehensive README with project description
-
--	SQL query documentation with clear naming conventions
-
--	Database schema explanation
-
--	Setup and usage instructions
-
-
 **Deployment Ready:**
 
 -	Complete database export in hospital_database.sql
