@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project implements a  MySQL database system for managing hospital operations, including doctors, patients, hospitals, and prescriptions. 
+This project implements a relational MySQL database system for hospital management with four core tables (Hospitals, Doctors, Patients, Prescriptions) and established foreign key relationships. The system includes six SQL queries for data retrieval and analysis in healthcare environments.
 
 ## Repository Contents
 
