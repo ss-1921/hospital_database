@@ -2,49 +2,25 @@
 
 ## Project Overview
 
-This project implements a comprehensive MySQL database system for managing hospital operations, including doctors, patients, hospitals, and prescriptions. The database supports various healthcare management functionalities through optimized SQL queries.
+This project implements a  MySQL database system for managing hospital operations, including doctors, patients, hospitals, and prescriptions. 
 
-### Database Structure
-
-### Tables
-- **Hospitals** (40 records): Hospital details including name, address, bed capacity, type, and accreditation status
-- **Doctors** (100 records): Medical professionals with personal details and hospital assignments
-- **Patients** (600 records): Patient records with personal details and assigned doctors
-- **Prescriptions** (500 records): Medication prescriptions linking patients and doctors
-
-### Relationships
--	One Hospital → Many Doctors
-
--	One Doctor → Many Patients
-
--	One Doctor → Many Prescriptions
-
--	One Patient → Many Prescriptions
-
-### Files in Repository
-
-**Main Files**:
+## Repository Contents
 
 -	hospital_database.sql - Complete database export
 
--	queries.sql - All required SQL queries with descriptive names
+-	queries.sql - All 6 functional SQL queries with descriptive names
 
--	README.md - This documentation file
+- CSV data files (hospitals, doctors, patients, prescriptions)
 
-**SQL Queries Included:**
-1.	get_doctors_by_hospital - List doctors at a specific hospital
-2.	get_patient_prescriptions - Patient medication history ordered by date
-3.	get_doctor_prescriptions - Doctor's prescription history
-4.	add_new_patient - Register new patient functionality
-5.	get_most_prescribing_doctor - Identify most active prescribing doctor
-6.	get_doctors_at_largest_hospital - Doctors at hospital with most beds
+-	README.md - Project documentation (this file)
 
-## DESCRIPTION
-### Problem Statement
-Healthcare institutions require efficient database systems to manage patient records, doctor assignments, hospital information, and prescription tracking. This project designs and implements a comprehensive MySQL database system to support hospital operations, enabling better patient care coordination and medical resource management.
-The objective is to create a relational database that can efficiently store and retrieve healthcare information to support common hospital operations.
+-	hospital_erd.png - Entity Relationship Diagram
 
-### Dataset Description
+## Data Generation
+
+The dataset was created using the provided CSV files as part of the assignment requirements.
+
+## Database Structure
 
 The database consists of four main tables:
 
@@ -55,7 +31,7 @@ The database consists of four main tables:
 | Patients | 600 | Patient records and medical assignments |
 | Prescriptions | 500 | Medication prescriptions and treatment records |
 
-### Variables Description
+### Table Schemas
 
 **Hospitals Table**
 | Variable | Type | Description |
@@ -96,6 +72,7 @@ The database consists of four main tables:
 | medication | VARCHAR(255) | Prescribed medication name |
 | prescription_date | DATE | Date prescription was issued |
 
+### Key Relationships
 **Primary Keys:**
 
 Each table has a unique primary key for record identification:
@@ -119,43 +96,9 @@ Each table has a unique primary key for record identification:
 -	Prescriptions → Patients (many-to-one)
 
 -	Prescriptions → Doctors (many-to-one)
+  
 
-
-**Data Integrity:**
-
--	Foreign key constraints ensure referential integrity
-
--	Cascading relationships maintain data consistency
-
--	Prevents orphaned records in related tables
-
-### Project Task: Database Design & Implementation
-
-**Data Modeling:**
-
--	Designed Entity Relationship Diagram (ERD) to establish table relationships
-
--	Implemented primary keys and foreign key constraints for data integrity
-
--	Established one-to-many relationships between Hospitals-Doctors and Doctors-Patients
-
--	Created many-to-many relationship resolution through Prescriptions table
-
-
-**Database Creation:**
-
--	Created MySQL database with four normalized tables
-
--	Imported data from CSV files using LOAD DATA LOCAL INFILE
-
--	Implemented proper data types and constraints
-
--	Verified data integrity through relationship validation
-
-
-**Project Task: Query Development**
-
-**Data Retrieval:**
+## SQL Queries
 
 1.	get_doctors_by_hospital - Retrieve all doctors based at a specific hospital
 
@@ -165,80 +108,14 @@ Each table has a unique primary key for record identification:
 
 4.	add_new_patient - Register new patients in the system
 
-
-**Data Analysis:**
-
 5. get_most_prescribing_doctor - Identify the most active prescribing doctor
 
 6. get_doctors_at_largest_hospital - Find doctors working at the hospital with maximum capacity
 
 
-**Data Integrity Checks:**
-
--	Verified foreign key relationships work correctly
-
--	Validated that all prescriptions reference existing patients and doctors
-
--	Confirmed hospital-doctor assignments are consistent
-
--	Tested query functionality with sample data
-
-
-**Performance Validation:**
-
--	All queries execute without errors
-
--	Relationships maintain referential integrity
-
--	Data retrieval operations return expected results
-
--	INSERT operations successfully add new records
-
-
-**Deployment Ready:**
-
--	Complete database export in hospital_database.sql
-
--	All functional SQL queries in queries.sql
-
--	GitHub repository with version control
-
--	Public access for assessment purposes
-
-
-**Files Included:**
-
--	hospital_database.sql - Complete database export
-
--	queries.sql - All 6 functional SQL queries with descriptive names
-
--	doctors.csv - Original doctor data (100 records)
-
--	hospitals.csv - Original hospital data (40 records)
-
--	patients.csv - Original patient data (600 records)
-
--	prescriptions.csv - Original prescription data (500 records)
-
--	README.md - Project documentation (this file)
-
--	hospital_erd.png - Entity Relationship Diagram
-
-**Entity Relationship Diagram**
+## Entity Relationship Diagram
 ![Hospital Database ERD](hospital_erd.png)
 
-
-**Conclusion**
-
-This hospital database system demonstrates:
-
--	Proper relational database design with normalized tables
-
--	Effective use of primary and foreign keys for data integrity
-
--	Functional SQL queries for common hospital operations
-
--	Comprehensive documentation for maintainability
-
-
-The system is ready for deployment and can be extended with additional healthcare modules.
+## How to Use
+1. Import `hospital_database.sql` into MySQL
+2. Run queries from `queries.sql` as needed
