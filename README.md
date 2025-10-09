@@ -18,7 +18,7 @@ This project implements a relational MySQL database system for hospital manageme
 
 ## Data Generation
 
-The dataset was created using the provided CSV files as part of the assignment requirements.
+The dataset was populated using the provided CSV files (`hospitals.csv`, `doctors.csv`, `patients.csv`, `prescriptions.csv`) imported into MySQL using the `LOAD DATA LOCAL INFILE` command.
 
 ## Database Structure
 
