@@ -28,8 +28,8 @@ The database consists of four main tables:
 |-------|---------|-------------|
 | Hospitals | 40 | Hospital details |
 | Doctors | 100 | Doctors records |
-| Patients | 600 | Patient records and medical assignments |
-| Prescriptions | 500 | Medication prescriptions and treatment records |
+| Patients | 600 | Patient records |
+| Prescriptions | 500 | Medication prescriptions |
 
 ### Table Schemas
 
